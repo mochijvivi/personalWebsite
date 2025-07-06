@@ -1,0 +1,360 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 1;
+  padding: 0;
+  background-color: #fffbeb;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 1rem 0rem;
+  height: 35vh;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+
+/* --- SKILLS Section Styling --- */
+.skills-grid {
+  display: grid;
+/* Create 4 columns, or adjust based on screen size */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem 1rem; /* Row gap and column gap */
+  width: 100%;
+}
+.skill-category {
+  text-align: center; /* Align text within each skill column */
+}
+.skill-category h4 {
+  font-size: 0.9rem; /* "LANGUAGES", "FRAMEWORKS" title size */
+  font-weight: bold;
+   /* Lighter gray for category titles on colored background */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem; /* Space below category title */
+}
+
+.skill-category ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.skill-category li {
+  font-size: 0.95rem;
+  line-height: 1.5; /* Line height for list items */
+/* White text on colored background */
+}
+
+
+.experience-entry {
+  display: flex;
+  justify-content: space-between; /* Space out company/role and date */
+  align-items: baseline; /* Align text baselines */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin-bottom: 1.5rem; /* Space between entries */
+  padding-bottom: 1rem; /* Padding before the divider */
+  border-bottom: 1px solid; /* Light white divider line */
+}
+
+.experience-entry:last-child {
+  margin-bottom: 0;
+  border-bottom: none; /* No divider after the last entry */
+}
+
+.experience-details {
+  display: flex;
+  flex-direction: column; /* Stack company and role */
+  align-items: flex-start; /* Align details to the left */
+}
+
+
+.company-name {
+  font-size: 1.1rem;        
+  font-weight: bold;                    
+ 
+}
+        
+.role {
+  font-size: 0.95rem;
+   margin-top: 0.2rem;
+}
+
+.date {
+  font-size: 0.95rem;
+  flex-shrink: 0; /* Prevent date from shrinking */
+  margin-left: 1rem; /* Space from details if on same line */
+}
+
+/* landing */
+.head-container {
+  display: flex;
+  align-items: center; /* vertically align img and text */
+  gap: 1.5rem; /* space between img and text */
+  margin-bottom: 0.1rem;
+}
+
+.wave-img {
+  max-width: 100px; /* or whatever size looks good */
+  height: auto;
+  
+  object-fit: cover;
+}
+
+.intro-text h1.head-intro{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.8rem;
+  font-weight: 100;
+  margin: 1;
+  color: #D84C4C;
+}
+
+
+
+/* footer*/
+.footer {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.icon-group {
+  display: flex;
+  gap: 1.5rem;
+}
+.bubble {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* navbar*/
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  background-color: #d84c4c; 
+  
+  padding: 0.5rem 0; /* Padding top/bottom */
+  display: flex;
+  justify-content: center; /* Center the nav items */
+  align-items: center;
+  border-radius: 0.5rem;
+  z-index: 10; /* Ensure navbar stays on top */
+  position: relative;
+  flex-shrink: 0; /* Prevent navbar from shrinking */
+
+  }
+
+.navbar-nav {
+ display: flex;
+  gap: 2rem; /* Space between nav items */
+}
+
+.nav-button {
+  background-color: transparent; /* Transparent background */
+  border: none; /* No border */
+  color: #ffffff; /* Gray-700 like text color */
+  font-size: 1.125rem; /* Equivalent to text-lg */
+  padding: 0.5rem 1rem; /* Padding for click area */
+  border-radius: 0.5rem; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth transitions for hover/active */
+  outline: none; /* Remove outline on focus */
+}
+
+.nav-button:hover {
+ background-color: #aa3b3b; /* Light gray on hover */
+}
+.nav-button.active {
+  font-weight: bold;
+  color: #ffffff; 
+  background-color: #aa3b3b;
+}        
+
+/* Content Slider Container */
+.content-slider-container {
+  flex-grow: 1; /* Allows container to take remaining height */
+  display: flex; /* Arrange sections horizontally */
+  width: 100%;
+  overflow-x: hidden; /* Hide horizontal scrollbar, handled by JS */
+  scroll-behavior: smooth; /* Smooth scrolling for content sections */
+  white-space: nowrap; /* Prevent content sections from wrapping */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+.content-section {
+  flex: 0 0 100%; /* Each section takes full width of the container */
+  width: 100%; /* Explicit width for full responsiveness */
+  display: flex; /* Use flexbox for content centering */
+  flex-direction: column;
+  /* Adjustments for new internal content layout */
+  justify-content: flex-start; /* Align content to the top within the section */
+  padding: 1rem 1rem; /* More vertical padding for internal content */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+  white-space: normal; /* Allow text to wrap within sections */
+  overflow-y: auto; /* Allow vertical scrolling within each section if content overflows */
+  ; /* Rounded corners */
+  margin: 1rem; /* Margin around each section */
+ }
+
+ /* --- PROJECTS Section Specific Styles --- */
+        #sectionProjs .section-heading {
+            font-size: 3rem; /* Match other section headings */
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        #sectionProj .section-description {
+            font-size: 1.25rem;
+            line-height: 1;
+            margin-bottom: 3rem; /* Space below description */
+            max-width: 800px; /* Limit width for readability */
+            text-align: center;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-direction: column; /* Stack cards vertically */
+            gap: 2rem; /* Space between project cards */
+            width: 100%;
+            max-width: 900px; /* Max width for the container of cards */
+            align-items: center; /* Center cards horizontally */
+            margin: 0 auto;
+        }
+
+        .project-card {
+            display: flex; /* Arrange color bar and content horizontally */
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+            border-radius: 0.75rem; /* Rounded corners for the card */
+            overflow: hidden; /* Ensures background image and color bar stay within bounds */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            text-decoration: none; /* Remove underline from link */
+            color: inherit; /* Inherit text color */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+            position: relative; /* For background image positioning */
+            min-height: 100px; /* Minimum height for cards */
+
+            /* Example background image - REPLACE WITH YOUR OWN IMAGES */
+            background-image: url('/assets/asleepbg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay; /* Blend background color with image */
+        }
+
+.project-card:hover {
+            transform: translateY(-5px); /* Lift card on hover */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+
+        .project-color-bar {
+            
+            flex-shrink: 0; /* Prevent it from shrinking */
+            background-color: #aa3b3b; /* Default color, overridden by inline style */
+        }
+
+        .project-content {
+            flex-grow: 1; /* Allows content to take remaining space */
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability on image */
+            width: calc(100% - 10px); /* Adjust width to account for color bar */
+            box-sizing: border-box;
+        }
+
+        .project-content h3 {
+            font-size: 1.8rem; /* "Text here" title size */
+            font-weight: bold;
+            margin: 0.5rem;
+            color: #ffffff;
+        }
+
+        .project-short-desc {
+            font-size: 0.95rem;
+            color: #e0e0e0; /* Lighter white for description */
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap; /* Allow tags to wrap */
+            gap: 0.5rem; /* Space between tags */
+        }
+
+        .project-tag {
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background for tags */
+            color: #ffffff;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 0.25rem; /* Slightly rounded corners for tags */
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+
+        /* Example: <a href="..." class="project-card project-card-1"> */
+        .project-card:nth-child(1) {
+            background-image: url('/assets/photofootbg.png');
+        }
+        .project-card:nth-child(2) {
+            background-image: url('/assets/asleepbg.jpg');
+        }
+
+/* Art section adjustments 
+            #sectionArt .section-heading {
+                font-size: 2rem;
+            }
+            #sectionArt .section-description {
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+            }
+            .art-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 0.5rem;
+            }
+            .art-modal-content {
+                padding: 10px;
+            }
+            .modal-title {
+                font-size: 1.2rem;
+            }
+            .modal-tag {
+                font-size: 0.6rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            */
+  
+
+@media (max-width: 480px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .nav-button {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .content-section {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}
+
